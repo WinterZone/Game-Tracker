@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Tracker</title>
+
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Google Fonts link for Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Game Tracker</h1>
+
+    <!-- Form for adding new games -->
+    <div class="game-form">
+        <h2>Add a Game</h2>
+        <label for="game-title">Game Title:</label>
+        <input type="text" id="game-title" placeholder="Enter game title"><br><br>
+
+        <label for="game-status">Status:</label>
+        <select id="game-status">
+            <option value="Playing">Playing</option>
+            <option value="Completed">Completed</option>
+            <option value="On Hold">On Hold</option>
+        </select><br><br>
+
+        <label for="game-rating">Rating (1-5):</label>
+        <input type="number" id="game-rating" min="1" max="5"><br><br>
+
+        <button onclick="addGame()">Add Game</button>
+    </div>
+
+    <!-- Form for editing games (hidden by default) -->
+    <div class="edit-form" style="display: none;">
+        <h2>Edit Game</h2>
+        <label for="edit-game-title">Game Title:</label>
+        <input type="text" id="edit-game-title" placeholder="Enter game title"><br><br>
+
+        <label for="edit-game-status">Status:</label>
+        <select id="edit-game-status">
+            <option value="Playing">Playing</option>
+            <option value="Completed">Completed</option>
+            <option value="On Hold">On Hold</option>
+        </select><br><br>
+
+        <label for="edit-game-rating">Rating (1-5):</label>
+        <input type="number" id="edit-game-rating" min="1" max="5"><br><br>
+
+        <button onclick="saveGame()">Save Changes</button>
+    </div>
+
+    <!-- Game List -->
+    <div class="game-list">
+        <h2>Your Games</h2>
+        <ul id="games-container"></ul>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 36px;
+    color: #ff6347;
+}
+
+h2 {
+    font-size: 24px;
+    color: #ff6347;
+}
+
+.game-form, .edit-form {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 500px;
+    margin: 20px auto;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"], input[type="number"], select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+button {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e55337;
+}
+
+.game-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.game-item {
+    background-color: #ffffff;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.game-item strong {
+    font-size: 18px;
+    color: #333;
+}
+
+.game-rating {
+    font-size: 18px;
+    color: #ffd700;
+}
+
+button.edit-button, button.delete-button {
+    margin-left: 10px;
+}
+
+button.edit-button {
+    background-color: #4682b4;
+}
+
+button.edit-button:hover {
+    background-color: #4169e1;
+}
+
+button.delete-button {
+    background-color: #ff6347;
+}
+
+button.delete-button:hover {
+    background-color: #e55337;
+}
+
+/* Background image using local file */
+body:before {
+    content: "";
+    background-image: url('./anime-background.jpg'); /* Make sure this file exists in the same folder */
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    filter: blur(5px);
+    opacity: 0.6;
+}
