@@ -113,3 +113,34 @@ body:before {
     filter: blur(5px);
     opacity: 0.6;
 }
+
+.game-details {
+    display: flex;
+    align-items: center;
+}
+
+.game-image {
+    max-width: 100px;
+    max-height: 100px;
+    margin-right: 10px;
+}
+
+.game-info {
+    flex: 1;
+}
+
+.game-actions {
+    display: flex;
+    flex-direction: column;
+}
+
+.sorting-options {
+    max-width: 500px;
+    margin: 20px auto;
+    text-align: right;
+}
+
+.sorting-options select {
+    padding: 5px;
+    font-size: 16px;
+}
