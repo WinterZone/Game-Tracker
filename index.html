@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Existing head content -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Tracker</title>
@@ -22,13 +23,20 @@
 
         <label for="game-status">Status:</label>
         <select id="game-status">
+            <option value="Want to Buy">Want to Buy</option>
+            <option value="Want to Play">Want to Play</option>
+            <option value="Threw">Threw</option>
             <option value="Playing">Playing</option>
+            <option value="Played">Played</option>
             <option value="Completed">Completed</option>
-            <option value="On Hold">On Hold</option>
+            <option value="100%">100%</option>
         </select><br><br>
 
-        <label for="game-rating">Rating (1-5):</label>
-        <input type="number" id="game-rating" min="1" max="5"><br><br>
+        <label for="game-rating">Rating (1-10):</label>
+        <input type="number" id="game-rating" min="1" max="10" disabled><br><br>
+
+        <label for="game-image">Game Image:</label>
+        <input type="file" id="game-image" accept="image/*"><br><br>
 
         <button onclick="addGame()">Add Game</button>
     </div>
@@ -41,15 +49,35 @@
 
         <label for="edit-game-status">Status:</label>
         <select id="edit-game-status">
+            <option value="Want to Buy">Want to Buy</option>
+            <option value="Want to Play">Want to Play</option>
+            <option value="Threw">Threw</option>
             <option value="Playing">Playing</option>
+            <option value="Played">Played</option>
             <option value="Completed">Completed</option>
-            <option value="On Hold">On Hold</option>
+            <option value="100%">100%</option>
         </select><br><br>
 
-        <label for="edit-game-rating">Rating (1-5):</label>
-        <input type="number" id="edit-game-rating" min="1" max="5"><br><br>
+        <label for="edit-game-rating">Rating (1-10):</label>
+        <input type="number" id="edit-game-rating" min="1" max="10"><br><br>
+
+        <!-- Display current image -->
+        <img id="current-image" src="" alt="Current Game Image" style="max-width: 100%; display: none;"><br><br>
+
+        <label for="edit-game-image">Change Image:</label>
+        <input type="file" id="edit-game-image" accept="image/*"><br><br>
 
         <button onclick="saveGame()">Save Changes</button>
+    </div>
+
+    <!-- Sorting options -->
+    <div class="sorting-options">
+        <label for="sort-by">Sort By:</label>
+        <select id="sort-by" onchange="sortGames()">
+            <option value="added">Last Added</option>
+            <option value="name">Name</option>
+            <option value="status">Status</option>
+        </select>
     </div>
 
     <!-- Game List -->
